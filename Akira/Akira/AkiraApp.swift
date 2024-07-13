@@ -5,6 +5,7 @@
  */
 
 import SwiftUI
+import SwiftData
 
 @main
 struct AkiraApp: App {
@@ -12,6 +13,7 @@ struct AkiraApp: App {
 		WindowGroup {
 			KDVMainView()
 		}
+	.modelContainer(for: KDVPerson.self)
 	}
 }
 
