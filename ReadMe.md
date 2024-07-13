@@ -1,8 +1,24 @@
 # Akira; A Technology Test of SwiftData and SwiftUI
 ### Or; "How I stopped worrying and learned to love the Bomb"
 
+<<<<<<< Updated upstream
 *20240713@1730*
 
+=======
+<<<<<<< HEAD
+20240713@1730
+Now I have added a basic implementation of SwiftData; It took a lot less time thatn it did going along with the YouTube Contend _However_ because I also refactored the names of the files inline it took longer than it will next time.
+Still this is a vast improvement over;
+1. >Doing it in XIB Files Top-Down with Dummy Data
+2. >Adding persistence in JSON
+
+
+20240713@1730
+=======
+*20240713@1730*
+
+>>>>>>> 2285f906c58a560f3151e6a9003677a5af44a5a6
+>>>>>>> Stashed changes
 SO I have started from an Empty Repo that I scavanged from Github and had no project in it, it had my boilerplate ./.gitignore but not even this ReadMe.md
 ~
 After Setting up a Blank iOS template I will add a few Droovy Directories for Resources, DataControllers and Views plus other DataEditors:UIView, possibly even a stub directory for external libs but that is getting ahead of things
