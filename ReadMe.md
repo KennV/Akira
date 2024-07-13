@@ -3,12 +3,14 @@
 
 
 *20240713@1830*
+
 Now I have added a basic implementation of SwiftData; It took a lot less time than it did going along with the YouTube Contend _However_ because I also refactored the names of the files inline it took longer than it will next time.
 Still this is a vast improvement over;
 1. >Doing it in XIB Files Top-Down with Dummy Data
 2. >Adding persistence in JSON
 
 *20240713@1730*
+
 SO I have started from an Empty Repo that I scavanged from Github and had no project in it, it had my boilerplate ./.gitignore but not even this ReadMe.md
 ~
 After Setting up a Blank iOS template I will add a few Droovy Directories for Resources, DataControllers and Views plus other DataEditors:UIView, possibly even a stub directory for external libs but that is getting ahead of things
