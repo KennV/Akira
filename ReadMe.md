@@ -7,6 +7,7 @@ Now I have added a basic implementation of SwiftData; It took a lot less time th
 Still this is a vast improvement over;
 1. >Doing it in XIB Files Top-Down with Dummy Data
 2. >Adding persistence in JSON
+
 *20240713@1730*
 SO I have started from an Empty Repo that I scavanged from Github and had no project in it, it had my boilerplate ./.gitignore but not even this ReadMe.md
 ~
