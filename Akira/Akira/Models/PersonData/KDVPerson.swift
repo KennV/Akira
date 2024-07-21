@@ -30,20 +30,20 @@ class KDVPerson {
 	// MARK: Utilities
 	func randomizePersonData(_ p:KDVPerson) {
 		p.userID = makeRandomHexQuad()
-		p.firstName = maleNames[makeRandomNumber(UInt32(maleNames.count as Int))]
-		p.midOrNoName =  femaleNames[makeRandomNumber(UInt32(femaleNames.count as Int))]
-		p.lastName =  lastNames[makeRandomNumber(UInt32(lastNames.count as Int))]
+		p.firstName = maleNames[makeRandomNumber(UInt32(maleNames.count))]
+		p.midOrNoName =  femaleNames[makeRandomNumber(UInt32(femaleNames.count))]
+		p.lastName =  lastNames[makeRandomNumber(UInt32(lastNames.count))]
 		p.userDetails =  "nil"
 		p.userAchievement =  "nil"
 		if (makeRandomNumber(100) <= 50) {
-			p.firstName = femaleNames[makeRandomNumber(UInt32(femaleNames.count as Int))]
+			p.firstName = femaleNames[makeRandomNumber(UInt32(femaleNames.count))]
 		}
 	}
 	
 	func makeRandomHexQuad() -> String {
 		var hex = String()
 		for _ in 1...4 {
-			let x = hexDigits[makeRandomNumber(UInt32(hexDigits.count as Int))]
+			let x = hexDigits[makeRandomNumber(UInt32(hexDigits.count))]
 			hex.append(x)
 		}
 		return hex

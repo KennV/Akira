@@ -3,6 +3,7 @@
 	Akira
 
 	Created by Kenn Villegas on 7/13/24.
+ 
 */
 
 import SwiftData
@@ -11,24 +12,20 @@ import SwiftUI
 struct KDVMainView: View {
 	
 	@Environment(\.modelContext) var modelContext
-	@Query var people: [KDVPerson] /** Hey an Array of @Bindable Objects*/
 	@State private var path = [KDVPerson]()
-	
+	@State private var searchString = ""
+//	var peopleView: KDVPeopleView?
+
 	var body: some View {
 		NavigationStack(path: $path) {
-			List {
-				ForEach (people) 
-				{
-					person in NavigationLink(value: person) {
-					Text (person.firstName + " " + person.lastName)
-					}
-				}
-			}
+			KDVPeopleView(searchText: searchString)
 			.navigationTitle("Titties!")
-			.navigationDestination(for: KDVPerson.self) { person in KDVEditPersonView(person: person)
+			.navigationDestination(for: KDVPerson.self) { 
+				person in KDVEditPersonView(person: person)
 			}
 			.toolbar {
 				Button ("add person", systemImage: "plus", action: addPerson)
+					.searchable(text: $searchString)
 			}
 		}
 	}
@@ -40,6 +37,14 @@ struct KDVMainView: View {
 		modelContext.insert(newPerson)
 		path.append(newPerson)
 	}
+	
+//	func deletePeople(at offsets: IndexSet) {
+//		for offset in offsets {
+//			let xP = people[offset]
+//			modelContext.delete(xP)
+//		}
+//	}
+	
 }
 
 #Preview {

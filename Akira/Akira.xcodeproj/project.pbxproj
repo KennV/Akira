@@ -13,6 +13,7 @@
 		382D39A62C43287200485F8C /* KDVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D39A42C43287200485F8C /* KDVMainView.swift */; };
 		382D39AA2C432CD300485F8C /* KDVPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D39A92C432CD300485F8C /* KDVPerson.swift */; };
 		382D39AC2C43340500485F8C /* KDVEditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D39AB2C43340500485F8C /* KDVEditPersonView.swift */; };
+		385327962C4CE3C300DC594B /* KDVPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385327952C4CE3C300DC594B /* KDVPeopleView.swift */; };
 		38DC36F22C4C9DFF00A3984E /* AkiraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC36F12C4C9DFF00A3984E /* AkiraTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		382D39A42C43287200485F8C /* KDVMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDVMainView.swift; sourceTree = "<group>"; };
 		382D39A92C432CD300485F8C /* KDVPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVPerson.swift; sourceTree = "<group>"; };
 		382D39AB2C43340500485F8C /* KDVEditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVEditPersonView.swift; sourceTree = "<group>"; };
+		385327952C4CE3C300DC594B /* KDVPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVPeopleView.swift; sourceTree = "<group>"; };
 		38DC36E82C4C9C4600A3984E /* AkiraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkiraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DC36F12C4C9DFF00A3984E /* AkiraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			children = (
 				382D39A42C43287200485F8C /* KDVMainView.swift */,
 				382D39AB2C43340500485F8C /* KDVEditPersonView.swift */,
+				385327952C4CE3C300DC594B /* KDVPeopleView.swift */,
 			);
 			name = Views;
 			path = Akira/Views;
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				382D39AA2C432CD300485F8C /* KDVPerson.swift in Sources */,
+				385327962C4CE3C300DC594B /* KDVPeopleView.swift in Sources */,
 				382D39A62C43287200485F8C /* KDVMainView.swift in Sources */,
 				382D39972C43280500485F8C /* AkiraApp.swift in Sources */,
 				382D39AC2C43340500485F8C /* KDVEditPersonView.swift in Sources */,
