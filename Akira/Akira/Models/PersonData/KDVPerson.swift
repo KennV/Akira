@@ -17,17 +17,27 @@ class KDVPerson {
 	var lastName: String
 	var userDetails: String
 	var userAchievement: String
+	var eMailAddress: String
+//	@Attribute(.externalStorage) var photo: Data?
 	
-	init(userID: String, firstName: String, midOrNoName: String, lastName: String, userDetails: String, userAchievement: String) {
+	init(userID: String, firstName: String, midOrNoName: String, lastName: String, userDetails: String, userAchievement: String, eMailAddress: String) {
 		self.userID = userID
 		self.firstName = firstName
 		self.midOrNoName = midOrNoName
 		self.lastName = lastName
 		self.userDetails = userDetails
 		self.userAchievement = userAchievement
+		self.eMailAddress = eMailAddress
 	}
+
+	// MARK: Person Setup
 	
-	// MARK: Utilities
+	/** 
+	### Sets randomized values for this class
+	- Parameter p: Person instance to modify inline
+	
+	Also note that currently ALL of the midle names are from female names and that half of the people will also recieve a female first name. (*However I will not be adding a Gender to the Person Class *)
+	*/
 	func randomizePersonData(_ p:KDVPerson) {
 		p.userID = makeRandomHexQuad()
 		p.firstName = maleNames[makeRandomNumber(UInt32(maleNames.count))]
@@ -40,6 +50,7 @@ class KDVPerson {
 		}
 	}
 	
+	// MARK: Utilities
 	func makeRandomHexQuad() -> String {
 		var hex = String()
 		for _ in 1...4 {
@@ -49,19 +60,19 @@ class KDVPerson {
 		return hex
 	}
 	
-
 	/**
-	### flat random number gen
+	### flat random number generator
+	 
 	- Parameter range: Positve Number
 	- Returns: Random Number
 	*/
-	func makeRandomNumber(_ range: UInt32) ->Int
-	{
+	func makeRandomNumber(_ range: UInt32) ->Int {
 		if (range <= 1) {
 			return(0)
 		}
 		return Int(arc4random_uniform(range))
 	}
+	
 	/**
 	### DnD Style Random Number Generator.
 	

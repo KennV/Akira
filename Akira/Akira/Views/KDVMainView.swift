@@ -3,7 +3,7 @@
 	Akira
 
 	Created by Kenn Villegas on 7/13/24.
- 
+
 */
 
 import SwiftData
@@ -31,20 +31,12 @@ struct KDVMainView: View {
 	}
 	
 	func addPerson() {
-		let newPerson = KDVPerson(userID: "unset", firstName: "nil", midOrNoName: "nil", lastName: "nil", userDetails: "unset", userAchievement: "unset")
-		newPerson.randomizePersonData(newPerson)
-		
+		let newPerson = KDVPerson(userID: "unset", firstName: "nil", midOrNoName: "nil", lastName: "nil", userDetails: "unset", userAchievement: "unset", eMailAddress: "Jive")
+	newPerson.randomizePersonData(newPerson)
 		modelContext.insert(newPerson)
 		path.append(newPerson)
 	}
-	
-//	func deletePeople(at offsets: IndexSet) {
-//		for offset in offsets {
-//			let xP = people[offset]
-//			modelContext.delete(xP)
-//		}
-//	}
-	
+
 }
 
 #Preview {

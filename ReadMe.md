@@ -1,10 +1,14 @@
 # Akira; A Technology Test of SwiftData and SwiftUI
 ### Or; "How I stopped worrying and learned to love the Bomb"
 
+20240721@0830
+
+Last night I finally got some headway on this project. I am starting to feel like I did early in the CoreData days. This is a very very interesting toolkit because it really delivers on the "best line of code is the one you did't have to write" Cocoa mentality. To get this far in CoreData would heve taken at least 3 - 4 times as long and I would have to have spent a lot of time in Interface Builder. And while I don't hate IB. I certainly don't mind bypassing that whole Kabuki-Cabaret.
+Anyway the next two steps are to add an "Events" entity and a photo for the user. Ooops THREE steps, there is the 'Renderer' object for the preview AND I also suspect that I will be refactoring the names of some classes and functions but that is a general part of Code Cleanup. I'm sure there are some nits-and-bits that reek of being written in the hella early A.M.
 
 20240721@0020
 
-Well it only makes me happy BUT I just made an AppleScript to generate this proper timestamp
+So For What It's Worth (FWIW) AND it only makes me happy BUT I just made an AppleScript to generate this proper timestamp. Now that _begs the obvious question_ literally "Who even uses Applescript?" and while it took a little bit longer than I wanted it to. It is a function that I do everytime I write a log or jornal file. So wasting an hour to automate a task that is very easy to get sidetracked while doing is. Pretty Frickin' Rad.
 
 20240720@2130
 

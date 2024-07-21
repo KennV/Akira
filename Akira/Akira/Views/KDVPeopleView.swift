@@ -9,8 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct KDVPeopleView: View {
+	
 	@Environment(\.modelContext) var modelContext
-	@Query var people: [KDVPerson] /** Hey an Array of @Bindable Objects*/
+	@Query var people: [KDVPerson]
 	@State private var searchText = ""
 
 	var body: some View{
@@ -23,7 +24,6 @@ struct KDVPeopleView: View {
 			}
 			.onDelete(perform: deletePeople)
 		}
-
 	}
 	
 	init(searchText: String = "", sortOrder: [SortDescriptor<KDVPerson>] = []) {
@@ -37,10 +37,6 @@ struct KDVPeopleView: View {
 			}
 		}, sort: sortOrder)
 	}
-	
-	/**
-	 20240721@0311
-	 */
 	
 	func deletePeople(at offsets: IndexSet) {
 		for offset in offsets {
