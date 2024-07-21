@@ -2,6 +2,13 @@
 ### Or; "How I stopped worrying and learned to love the Bomb"
 
 
+
+*20240720@0630*
+
+Yeah welcome to the land of Slagging Off. Well not really B/C of work and life and Lolz. But also, because no code should be wasted. I see this demo program as a good place to begin, however, I do not want to manually test it, and have to tape in *anybody's* given name or data. This is where I get to leverage a lot of old code from Cocoa and swift, so that I am actually factoring this project into something extendable and useful in the future, sort of future future proofing it before it's even written. This is both pre-refactoring and refactoring.
+For example, I have Arrays of strings in the player class for names and such. I also have strings in the general UI and these should be localized. The names are abstract and genderless and that should be fixed. The RandomizePlayer functions should also be private Also these Arrays should be at the very least. It is not as if I want to type these out manually and then surface a bug to delete the third person's sub relations to @whereMet?, or @friendsOf?. These should certainly in Demo and Test Be utilized. they are cheap and reusable - - 
+
+
 *20240713@1830*
 
 Now I have added a basic implementation of SwiftData; It took a lot less time than it did going along with the YouTube Contend _However_ because I also refactored the names of the files inline it took longer than it will next time.

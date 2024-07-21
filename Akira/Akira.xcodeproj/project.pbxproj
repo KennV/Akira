@@ -13,7 +13,18 @@
 		382D39A62C43287200485F8C /* KDVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D39A42C43287200485F8C /* KDVMainView.swift */; };
 		382D39AA2C432CD300485F8C /* KDVPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D39A92C432CD300485F8C /* KDVPerson.swift */; };
 		382D39AC2C43340500485F8C /* KDVEditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D39AB2C43340500485F8C /* KDVEditPersonView.swift */; };
+		38DC36F22C4C9DFF00A3984E /* AkiraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC36F12C4C9DFF00A3984E /* AkiraTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38DC36EC2C4C9C4600A3984E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 382D398B2C43280500485F8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 382D39922C43280500485F8C;
+			remoteInfo = Akira;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		382D39932C43280500485F8C /* Akira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Akira.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,10 +34,19 @@
 		382D39A42C43287200485F8C /* KDVMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDVMainView.swift; sourceTree = "<group>"; };
 		382D39A92C432CD300485F8C /* KDVPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVPerson.swift; sourceTree = "<group>"; };
 		382D39AB2C43340500485F8C /* KDVEditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVEditPersonView.swift; sourceTree = "<group>"; };
+		38DC36E82C4C9C4600A3984E /* AkiraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkiraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DC36F12C4C9DFF00A3984E /* AkiraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		382D39902C43280500485F8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38DC36E52C4C9C4600A3984E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +62,7 @@
 				382D39A82C432C7700485F8C /* Models */,
 				382D39A52C43287200485F8C /* Views */,
 				382D39952C43280500485F8C /* Akira */,
+				38DC36E92C4C9C4600A3984E /* AkiraTests */,
 				382D39942C43280500485F8C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				382D39932C43280500485F8C /* Akira.app */,
+				38DC36E82C4C9C4600A3984E /* AkiraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +121,14 @@
 			path = Akira/Models;
 			sourceTree = "<group>";
 		};
+		38DC36E92C4C9C4600A3984E /* AkiraTests */ = {
+			isa = PBXGroup;
+			children = (
+				38DC36F12C4C9DFF00A3984E /* AkiraTests.swift */,
+			);
+			path = AkiraTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +149,24 @@
 			productReference = 382D39932C43280500485F8C /* Akira.app */;
 			productType = "com.apple.product-type.application";
 		};
+		38DC36E72C4C9C4600A3984E /* AkiraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38DC36F02C4C9C4600A3984E /* Build configuration list for PBXNativeTarget "AkiraTests" */;
+			buildPhases = (
+				38DC36E42C4C9C4600A3984E /* Sources */,
+				38DC36E52C4C9C4600A3984E /* Frameworks */,
+				38DC36E62C4C9C4600A3984E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38DC36ED2C4C9C4600A3984E /* PBXTargetDependency */,
+			);
+			name = AkiraTests;
+			productName = AkiraTests;
+			productReference = 38DC36E82C4C9C4600A3984E /* AkiraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,6 +179,11 @@
 				TargetAttributes = {
 					382D39922C43280500485F8C = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					38DC36E72C4C9C4600A3984E = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+						TestTargetID = 382D39922C43280500485F8C;
 					};
 				};
 			};
@@ -148,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				382D39922C43280500485F8C /* Akira */,
+				38DC36E72C4C9C4600A3984E /* AkiraTests */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +213,13 @@
 			files = (
 				382D399E2C43280700485F8C /* Preview Assets.xcassets in Resources */,
 				382D399B2C43280700485F8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38DC36E62C4C9C4600A3984E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +237,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38DC36E42C4C9C4600A3984E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DC36F22C4C9DFF00A3984E /* AkiraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38DC36ED2C4C9C4600A3984E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 382D39922C43280500485F8C /* Akira */;
+			targetProxy = 38DC36EC2C4C9C4600A3984E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		382D399F2C43280700485F8C /* Debug */ = {
@@ -356,6 +433,45 @@
 			};
 			name = Release;
 		};
+		38DC36EE2C4C9C4600A3984E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LQ75G5YK98;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.v3nk.AkiraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Akira.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Akira";
+			};
+			name = Debug;
+		};
+		38DC36EF2C4C9C4600A3984E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LQ75G5YK98;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.v3nk.AkiraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Akira.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Akira";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -373,6 +489,15 @@
 			buildConfigurations = (
 				382D39A22C43280700485F8C /* Debug */,
 				382D39A32C43280700485F8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38DC36F02C4C9C4600A3984E /* Build configuration list for PBXNativeTarget "AkiraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DC36EE2C4C9C4600A3984E /* Debug */,
+				38DC36EF2C4C9C4600A3984E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
