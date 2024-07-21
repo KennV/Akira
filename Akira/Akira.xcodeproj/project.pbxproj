@@ -14,6 +14,7 @@
 		382D39AA2C432CD300485F8C /* KDVPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D39A92C432CD300485F8C /* KDVPerson.swift */; };
 		382D39AC2C43340500485F8C /* KDVEditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D39AB2C43340500485F8C /* KDVEditPersonView.swift */; };
 		385327962C4CE3C300DC594B /* KDVPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385327952C4CE3C300DC594B /* KDVPeopleView.swift */; };
+		38BDF87D2C4D591F006FD2FA /* KDVEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BDF87B2C4D591F006FD2FA /* KDVEvent.swift */; };
 		38DC36F22C4C9DFF00A3984E /* AkiraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC36F12C4C9DFF00A3984E /* AkiraTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		382D39A92C432CD300485F8C /* KDVPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVPerson.swift; sourceTree = "<group>"; };
 		382D39AB2C43340500485F8C /* KDVEditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVEditPersonView.swift; sourceTree = "<group>"; };
 		385327952C4CE3C300DC594B /* KDVPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVPeopleView.swift; sourceTree = "<group>"; };
+		38BDF87B2C4D591F006FD2FA /* KDVEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDVEvent.swift; sourceTree = "<group>"; };
 		38DC36E82C4C9C4600A3984E /* AkiraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkiraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DC36F12C4C9DFF00A3984E /* AkiraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,10 +120,19 @@
 		382D39A82C432C7700485F8C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				38BDF87C2C4D591F006FD2FA /* EventsData */,
 				382D39A72C432C7700485F8C /* PersonData */,
 			);
 			name = Models;
 			path = Akira/Models;
+			sourceTree = "<group>";
+		};
+		38BDF87C2C4D591F006FD2FA /* EventsData */ = {
+			isa = PBXGroup;
+			children = (
+				38BDF87B2C4D591F006FD2FA /* KDVEvent.swift */,
+			);
+			path = EventsData;
 			sourceTree = "<group>";
 		};
 		38DC36E92C4C9C4600A3984E /* AkiraTests */ = {
@@ -237,6 +248,7 @@
 				385327962C4CE3C300DC594B /* KDVPeopleView.swift in Sources */,
 				382D39A62C43287200485F8C /* KDVMainView.swift in Sources */,
 				382D39972C43280500485F8C /* AkiraApp.swift in Sources */,
+				38BDF87D2C4D591F006FD2FA /* KDVEvent.swift in Sources */,
 				382D39AC2C43340500485F8C /* KDVEditPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
