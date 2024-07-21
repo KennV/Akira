@@ -5,6 +5,7 @@
 	Created by Kenn Villegas on 7/13/24.
 */
 
+import PhotosUI
 import SwiftUI
 import SwiftData
 
@@ -12,7 +13,8 @@ struct KDVEditPersonView: View {
 	@Environment(\.modelContext) var context
 	@Bindable var p: KDVPerson
 	@Binding var navPath: NavigationPath
-	// Photos Soon?
+	@State private var selectedItem: PhotosPickerItem?
+	
 	@Query (sort: [
 		SortDescriptor(\KDVEvent.name),
 		SortDescriptor(\KDVEvent.location)
@@ -21,6 +23,17 @@ struct KDVEditPersonView: View {
 
 	var body: some View {
 		Form {
+			Section {
+				if let imageData = p.photo, let uiImage = UIImage(data: imageData) {
+					Image(uiImage: uiImage)
+						.resizable()
+						.scaledToFit()
+				}
+				
+				PhotosPicker(selection: $selectedItem, matching: .images) {
+					Label("Select a photo", systemImage: "person")
+				}
+			}
 			Section {
 				VStack {
 					HStack {
@@ -55,15 +68,23 @@ struct KDVEditPersonView: View {
 		.navigationDestination(for: KDVEvent.self) { event in
 			KDVEditEventView(event: event)
 		}
+		.onChange(of: selectedItem, loadPhoto)
+	}
+
+	func loadPhoto() {
+		Task { @MainActor in
+			p.photo = try await selectedItem?.loadTransferable(type: Data.self)
+		}
 	}
 
 
+	
 	func addEvent() { // I seem to have a phantom one
 		let e = KDVEvent(name: "", location: "")
 		context.insert(e)
 		navPath.append(e)
 
-	}
+	} 
 
 
 

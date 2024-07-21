@@ -19,7 +19,7 @@ class KDVPerson {
 	var userAchievement: String
 	var eMailAddress: String
 	var metAt: KDVEvent?
-//	@Attribute(.externalStorage) var photo: Data?
+	@Attribute(.externalStorage) var photo: Data?
 	
 	init(userID: String, firstName: String, midOrNoName: String, lastName: String, userDetails: String, userAchievement: String, eMailAddress: String, metAt: KDVEvent?) {
 		self.userID = userID
@@ -29,7 +29,9 @@ class KDVPerson {
 		self.userDetails = userDetails
 		self.userAchievement = userAchievement
 		self.eMailAddress = eMailAddress
-		self.metAt = metAt
+		self.metAt = nil /**
+		lets see if I don't get phantom events 20240721@1412 _*That's the kinda shit I'm talkin about*_ Realistically there are very VERY few places that could have been making new empty event
+		*/
 	}
 
 	// MARK: Person Setup
