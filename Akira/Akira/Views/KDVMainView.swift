@@ -49,5 +49,11 @@ struct KDVMainView: View {
 
 
 #Preview {
-	KDVMainView()
+	do {
+		let p = try KDVPreviewer()
+		return KDVMainView()
+			.modelContainer(p.container)
+	} catch {
+		return Text("Failed to create preview: \(error.localizedDescription)")
+	}
 }

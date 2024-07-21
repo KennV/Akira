@@ -2,9 +2,10 @@
 	KDVEditEventView.swift
 	Akira
 	Created by Kenn Villegas on 7/21/24.
-	*/
+
+*/
+
 import SwiftUI
-//import SwiftData
 
 struct KDVEditEventView: View {
 
@@ -22,6 +23,13 @@ struct KDVEditEventView: View {
 }
 
 
-//#Preview {
-//	KDVEditEventView()
-//}
+#Preview {
+	do {
+		let viewer = try KDVPreviewer()
+
+		return KDVEditEventView (event: viewer.e)
+	} catch {
+		return Text("Failed to create preview: \(error.localizedDescription)")
+	}
+
+}

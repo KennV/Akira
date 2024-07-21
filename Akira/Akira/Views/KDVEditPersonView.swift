@@ -17,7 +17,8 @@ struct KDVEditPersonView: View {
 		SortDescriptor(\KDVEvent.name),
 		SortDescriptor(\KDVEvent.location)
 	]) var events: [KDVEvent]
-	
+
+
 	var body: some View {
 		Form {
 			Section {
@@ -34,14 +35,12 @@ struct KDVEditPersonView: View {
 				Picker("Met at: ", selection: $p.metAt) {
 					Text("Unknown Event")
 						.tag(Optional<KDVEvent>.none)
-					
 					if events.isEmpty == false {
 						Divider()
 						ForEach (events) { event in
 							Text(event.name)
 								.tag(Optional(event))
 						}
-
 					}
 				}
 			}
@@ -59,7 +58,7 @@ struct KDVEditPersonView: View {
 	}
 
 
-	func addEvent() {
+	func addEvent() { // I seem to have a phantom one
 		let e = KDVEvent(name: "", location: "")
 		context.insert(e)
 		navPath.append(e)
@@ -69,7 +68,13 @@ struct KDVEditPersonView: View {
 
 
 }
-//#Preview {
-//	KDVEditPersonView()
-//}
+#Preview {
+	do {
+		let viewer = try KDVPreviewer()
 
+		return KDVEditPersonView(p: viewer.p, navPath: .constant(NavigationPath())) .modelContainer(viewer.container)
+
+	} catch {
+		return Text("Failed to create preview: \(error.localizedDescription)")
+	}
+}
