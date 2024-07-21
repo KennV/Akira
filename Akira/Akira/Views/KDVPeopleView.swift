@@ -11,12 +11,12 @@ import SwiftData
 struct KDVPeopleView: View {
 	
 	@Environment(\.modelContext) var modelContext
-	@Query var people: [KDVPerson]
+	@Query var personsArray: [KDVPerson]
 	@State private var searchText = ""
 
 	var body: some View{
 		List {
-			ForEach (people)
+			ForEach (personsArray)
 			{
 				person in NavigationLink(value: person) {
 					Text (person.firstName + " " + person.lastName)
@@ -27,7 +27,7 @@ struct KDVPeopleView: View {
 	}
 	
 	init(searchText: String = "", sortOrder: [SortDescriptor<KDVPerson>] = []) {
-		_people = Query(filter: #Predicate { person in
+		_personsArray = Query(filter: #Predicate { person in
 			if searchText.isEmpty {
 				true
 			} else {
@@ -40,7 +40,7 @@ struct KDVPeopleView: View {
 	
 	func deletePeople(at offsets: IndexSet) {
 		for offset in offsets {
-			let xP = people[offset]
+			let xP = personsArray[offset]
 			modelContext.delete(xP)
 		}
 	}

@@ -18,9 +18,10 @@ class KDVPerson {
 	var userDetails: String
 	var userAchievement: String
 	var eMailAddress: String
+	var metAt: KDVEvent?
 //	@Attribute(.externalStorage) var photo: Data?
 	
-	init(userID: String, firstName: String, midOrNoName: String, lastName: String, userDetails: String, userAchievement: String, eMailAddress: String) {
+	init(userID: String, firstName: String, midOrNoName: String, lastName: String, userDetails: String, userAchievement: String, eMailAddress: String, metAt: KDVEvent?) {
 		self.userID = userID
 		self.firstName = firstName
 		self.midOrNoName = midOrNoName
@@ -28,6 +29,7 @@ class KDVPerson {
 		self.userDetails = userDetails
 		self.userAchievement = userAchievement
 		self.eMailAddress = eMailAddress
+		self.metAt = metAt
 	}
 
 	// MARK: Person Setup

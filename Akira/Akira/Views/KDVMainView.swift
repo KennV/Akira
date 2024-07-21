@@ -12,16 +12,16 @@ import SwiftUI
 struct KDVMainView: View {
 
 	@Environment(\.modelContext) var modelContext
-	@State private var path = [KDVPerson]()
+	@State private var path = NavigationPath()
 	@State private var searchString = ""
 	@State private var sortOrder = [SortDescriptor (\KDVPerson.firstName)]
 
 	var body: some View {
 		NavigationStack(path: $path) {
 			KDVPeopleView(searchText: searchString, sortOrder: sortOrder)
-			.navigationTitle("Titties!")
+			.navigationTitle("People Tracker!")
 			.navigationDestination(for: KDVPerson.self) {
-				person in KDVEditPersonView(person: person)
+				person in KDVEditPersonView(p: person, navPath: $path)
 			}
 			.toolbar {
 				Menu ("Sort", systemImage: "arrow.up.arrow.down") {
@@ -40,10 +40,10 @@ struct KDVMainView: View {
 	}
 
 	func addPerson() {
-		let newPerson = KDVPerson(userID: "unset", firstName: "nil", midOrNoName: "nil", lastName: "nil", userDetails: "unset", userAchievement: "unset", eMailAddress: "Jive")
-	newPerson.randomizePersonData(newPerson)
-		modelContext.insert(newPerson)
-		path.append(newPerson)
+		let p = KDVPerson(userID: "unset", firstName: "nil", midOrNoName: "nil", lastName: "nil", userDetails: "unset", userAchievement: "unset", eMailAddress: "Jive", metAt: KDVEvent(name: "", location: ""))
+	p.randomizePersonData(p)
+		modelContext.insert(p)
+		path.append(p)
 	}
 }
 
