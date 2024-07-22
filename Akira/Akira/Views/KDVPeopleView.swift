@@ -11,15 +11,15 @@ import SwiftData
 struct KDVPeopleView: View {
 	
 	@Environment(\.modelContext) var modelContext
-	@Query var personsArray: [KDVPerson]
+	@Query var pArr: [KDVPerson]
 	@State private var searchText = ""
 
 	var body: some View{
 		List {
-			ForEach (personsArray)
+			ForEach (pArr)
 			{
-				person in NavigationLink(value: person) {
-					Text (person.firstName + " " + person.lastName)
+				p in NavigationLink(value: p) {
+					Text (p.firstName + " " + p.lastName)
 				}
 			}
 			.onDelete(perform: deletePeople)
@@ -27,20 +27,22 @@ struct KDVPeopleView: View {
 	}
 	
 	init(searchText: String = "", sortOrder: [SortDescriptor<KDVPerson>] = []) {
-		_personsArray = Query(filter: #Predicate { person in
+		_pArr = Query(filter: #Predicate { p in
 			if searchText.isEmpty {
 				true
 			} else {
-				person.firstName.localizedStandardContains(searchText)
-				|| person.lastName.localizedStandardContains(searchText)
-				|| person.userDetails.localizedStandardContains(searchText)
+				p.firstName.localizedStandardContains(searchText)
+				|| p.lastName.localizedStandardContains(searchText)
+				|| p.userDetails.localizedStandardContains(searchText)
 			}
 		}, sort: sortOrder)
 	}
 	
+	/// I Delete KDVPeople
+	/// - Parameter offsets: Indices for People\Objs
 	func deletePeople(at offsets: IndexSet) {
 		for offset in offsets {
-			let xP = personsArray[offset]
+			let xP = pArr[offset]
 			modelContext.delete(xP)
 		}
 	}

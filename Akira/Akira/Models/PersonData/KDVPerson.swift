@@ -44,13 +44,13 @@ class KDVPerson {
 	*/
 	func randomizePersonData(_ p:KDVPerson) {
 		p.userID = makeRandomHexQuad()
-		p.firstName = maleNames[makeRandomNumber(UInt32(maleNames.count))]
-		p.midOrNoName =  femaleNames[makeRandomNumber(UInt32(femaleNames.count))]
-		p.lastName =  lastNames[makeRandomNumber(UInt32(lastNames.count))]
+		p.firstName = MaleNames[makeRandomNumber(UInt32(MaleNames.count))]
+		p.midOrNoName =  FemaleNames[makeRandomNumber(UInt32(FemaleNames.count))]
+		p.lastName =  LastNames[makeRandomNumber(UInt32(LastNames.count))]
 		p.userDetails =  "nil"
 		p.userAchievement =  "nil"
 		if (makeRandomNumber(100) <= 50) {
-			p.firstName = femaleNames[makeRandomNumber(UInt32(femaleNames.count))]
+			p.firstName = FemaleNames[makeRandomNumber(UInt32(FemaleNames.count))]
 		}
 	}
 	
@@ -58,7 +58,7 @@ class KDVPerson {
 	func makeRandomHexQuad() -> String {
 		var hex = String()
 		for _ in 1...4 {
-			let x = hexDigits[makeRandomNumber(UInt32(hexDigits.count))]
+			let x = HexDigits[makeRandomNumber(UInt32(HexDigits.count))]
 			hex.append(x)
 		}
 		return hex
@@ -95,9 +95,9 @@ class KDVPerson {
 	}
 
 // MARK: Strings
-private let femaleNames: [String] = ["Jessica", "Ashley", "Amanda", "Sarah", "Jennifer", "Brittany", "Stephanie", "Samantha", "Nicole", "Elizabeth", "Lauren", "Megan", "Tiffany", "Heather", "Amber", "Melissa", "Danielle", "Emily", "Rachel", "Kayla"]
-private let maleNames: [String] = ["Michael", "Christopher", "Matthew", "Joshua", "Andrew", "David", "Justin", "Daniel", "James", "Robert", "John", "Joseph", "Ryan", "Nicholas", "Jonathan", "William", "Brandon", "Anthony", "Kevin", "Eric"]
-private let lastNames: [String] = ["Cero", "Uno", "Dos", "Tres", "Quatro", "Cinco", "Seis",   "Siete", "Ocho", "Nueve", "Diez", "Once", "Doce", "Triece", "Catorce", "Quince", "Diesiseis", "Dies y Siete", "Diez y Ochco", "Diez y Nueve"]
-private let hexDigits: [String] = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+private let FemaleNames: [String] = ["Jessica", "Ashley", "Amanda", "Sarah", "Jennifer", "Brittany", "Stephanie", "Samantha", "Nicole", "Elizabeth", "Lauren", "Megan", "Tiffany", "Heather", "Amber", "Melissa", "Danielle", "Emily", "Rachel", "Kayla"]
+private let MaleNames: [String] = ["Michael", "Christopher", "Matthew", "Joshua", "Andrew", "David", "Justin", "Daniel", "James", "Robert", "John", "Joseph", "Ryan", "Nicholas", "Jonathan", "William", "Brandon", "Anthony", "Kevin", "Eric"]
+private let LastNames: [String] = ["Cero", "Uno", "Dos", "Tres", "Quatro", "Cinco", "Seis",   "Siete", "Ocho", "Nueve", "Diez", "Once", "Doce", "Triece", "Catorce", "Quince", "Diesiseis", "Dies y Siete", "Diez y Ochco", "Diez y Nueve"]
+private let HexDigits: [String] = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
 	
 }

@@ -20,7 +20,6 @@ struct KDVEditPersonView: View {
 		SortDescriptor(\KDVEvent.location)
 	]) var events: [KDVEvent]
 
-
 	var body: some View {
 		Form {
 			Section {
@@ -29,7 +28,7 @@ struct KDVEditPersonView: View {
 						.resizable()
 						.scaledToFit()
 				}
-				
+
 				PhotosPicker(selection: $selectedItem, matching: .images) {
 					Label("Select a photo", systemImage: "person")
 				}
@@ -43,7 +42,7 @@ struct KDVEditPersonView: View {
 					TextField ("uID: ", text: $p.userID)
 				}
 			}
-			
+
 			Section ("Where did we meet:") {
 				Picker("Met at: ", selection: $p.metAt) {
 					Text("Unknown Event")
@@ -57,8 +56,9 @@ struct KDVEditPersonView: View {
 					}
 				}
 			}
+
 			Button("Add a new event", action: addEvent)
-			
+
 			Section("Persons Details") {
 				TextField ("Details: ", text: $p.userDetails, axis: .vertical)
 			}
@@ -66,10 +66,13 @@ struct KDVEditPersonView: View {
 		.navigationTitle("Edit Person:")
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationDestination(for: KDVEvent.self) { event in
-			KDVEditEventView(event: event)
+			KDVEditEventView(e: event)
 		}
 		.onChange(of: selectedItem, loadPhoto)
 	}
+
+	//MARK: BYO
+
 
 	func loadPhoto() {
 		Task { @MainActor in
@@ -77,18 +80,14 @@ struct KDVEditPersonView: View {
 		}
 	}
 
-
-	
-	func addEvent() { // I seem to have a phantom one
+	func addEvent() {
 		let e = KDVEvent(name: "", location: "")
 		context.insert(e)
 		navPath.append(e)
-
-	} 
-
-
-
+	}
 }
+
+
 #Preview {
 	do {
 		let viewer = try KDVPreviewer()

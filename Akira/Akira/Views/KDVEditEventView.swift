@@ -9,13 +9,13 @@ import SwiftUI
 
 struct KDVEditEventView: View {
 
-	@Bindable var event: KDVEvent
+	@Bindable var e: KDVEvent
 
 
 	var body: some View {
 		Form {
-			TextField("Name of Event:", text: $event.name)
-			TextField("Location:", text: $event.location)
+			TextField("Name of Event:", text: $e.name)
+			TextField("Location:", text: $e.location)
 		}
 		.navigationTitle("Edit Event:")
 		.navigationBarTitleDisplayMode(.inline)
@@ -27,7 +27,7 @@ struct KDVEditEventView: View {
 	do {
 		let viewer = try KDVPreviewer()
 
-		return KDVEditEventView (event: viewer.e)
+		return KDVEditEventView (e: viewer.e)
 	} catch {
 		return Text("Failed to create preview: \(error.localizedDescription)")
 	}

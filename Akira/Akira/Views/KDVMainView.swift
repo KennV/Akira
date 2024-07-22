@@ -10,7 +10,11 @@ import SwiftData
 import SwiftUI
 
 struct KDVMainView: View {
-
+	
+	// MARK: DATA STUBS
+	/**
+	Apparently these are also inthe correct order
+	 */
 	@Environment(\.modelContext) var modelContext
 	@State private var path = NavigationPath()
 	@State private var searchString = ""
