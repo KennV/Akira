@@ -1,5 +1,30 @@
 # Akira; A Technology Test of SwiftData and SwiftUI
-### Or; "How I stopped worrying and learned to love the Bomb"
+### Or; "How I stopped worrying and learned to love the Bomb"###
+
+
+
+####AppleScript is the Fruit of the Gods####
+~
+And alas we have forsaken _our_ ways.
+~
+TL;DR 
+Anythig that a unix 10x leet güru can do in bash I have it all over in AppleScript. AAMOF, If I Recall Correctly that AppleScript Studio was one of Chris Lattner's early projects when he came onboard.
+I do not expect that it will be around forever. 
+
+I prefer my timestamps in a particular format YYYYMMDD@2359 which is 4-digits of Year, 2-digits of Month and Day and the Hours in 24-Hour format. I strongly prefer this as I _feel_ it is unambiguous. I ise it every log, ot journal entry, sometimes I inline it in a comment and see when I implemented a feature or made a design change. Ytping this is not har. A yimestamp is trivial.
+~
+_¿So, Why?_, why all the love ofr AppleScript. Well Chiefly because it is really a low level utility. Seriously it has its ROOTS way back in MacOS 7. That one that introduced Vitrual Memory and something else {in addition to ad-hoc networks, wsiwyg, multimedia… IDK} _Plus_ AppleScript. All of these are take for granted but AS still does some amazing things. I mean i Know it's less than 25 lines including comments and whitespace, but that includes error checking, formatting AND putting it on the clipboard
+~
+In this case I might save somewhere between 2-3 minutes a day, But that isn't the benefit at all. It is the one click and I am ready in note-taking before I even have the chance to get frustrated. Is that a benefit? Only if you really don't wnat to lose track of what you were thinking of _that *VERY* moment_
+A task like this I could easily do in a shell script. I think my zsh config has date like that so it is easy to do. Now here is something interesting. I 'Could' run a `do shell script` with this awk pattern inside. But this had me thinking. I KNOW and see that AS is O-O has breakpoints and its own GUI\TK. Therefore before doing it good let me do it right.
+
+
+20240721@2140
+
+It is either the "failure of state" or the "state of failure" that is bugging TF out of me tonight. *_¡See!_* I had intended to deliver this demo onto my iPad, because once you do that on the cable you can do the rest OTA orin AitDrop. But when I got there the cupboard was bare and I was being asked to renew my ADC membership, for 105 dollars that I simply don't have. 
+~
+Now I ain't _really_ gonna let that burn me for more than a few hours as I decide a new plan. But in the meantime, (or immediate future - - in the post _above_ this) I will tell a funny tale of AppleScript.
+
 
 20240721@0830
 
